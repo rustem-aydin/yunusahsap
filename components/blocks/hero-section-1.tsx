@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import Image from "next/image";
@@ -39,7 +39,7 @@ export function HeroSection() {
           <div className="h-320 -translate-y-[350px] absolute left-0 top-0 w-56 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
         </div>
         <section>
-          <div className="relative pt-24 md:pt-36">
+          <div className="relative pt-18 md:pt-36">
             <AnimatedGroup
               variants={{
                 container: {
@@ -70,7 +70,7 @@ export function HeroSection() {
               <Image
                 src="/images/hero.jpeg"
                 alt="background"
-                className="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 dark:block"
+                className="absolute inset-x-0 top-24 -z-20 block lg:top-32 "
                 width="3276"
                 height="4095"
               />
@@ -84,9 +84,9 @@ export function HeroSection() {
                 <AnimatedGroup variants={transitionVariants}>
                   <Link
                     href="#link"
-                    className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
+                    className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-[2px] md:p-1  pl-2 md:pl-4  shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
                   >
-                    <span className="text-foreground text-sm">
+                    <span className="text-foreground text-[12px] md:text-sm">
                       Kampanyaları Görmek İçin Tıklayınız
                     </span>
                     <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
@@ -103,10 +103,10 @@ export function HeroSection() {
                     </div>
                   </Link>
 
-                  <h1 className="mt-8 max-w-4xl mx-auto text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]">
+                  <h1 className="mt-4 md:mt-8 max-w-4xl mx-auto text-balance text-3xl sm:text-5xl md:text-7xl lg:mt-16 xl:text-[5.25rem]">
                     Prefabrik ve Çelik Yapı Çözümleri
                   </h1>
-                  <p className="mx-auto mt-8 max-w-2xl text-balance text-lg">
+                  <p className="mx-auto mt-4 md:mt-8 max-w-2xl text-balance text-sm md:text-lg">
                     Prefabrik yapılar, hem güvenilirlik hem de esneklik sunarak,
                     hayallerinizi gerçeğe dönüştürmenin en hızlı ve etkili
                     yoludur.
@@ -125,33 +125,32 @@ export function HeroSection() {
                     },
                     ...transitionVariants,
                   }}
-                  className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row"
+                  className="mt-6 md:mt-12 flex flex-col items-center justify-center gap-2 md:flex-row"
                 >
                   <div
                     key={1}
-                    className="bg-foreground/10 rounded-[14px] border p-0.5"
+                    className="grid gap-2 grid-cols-2 rounded-[14px] border p-0.5"
                   >
                     <Button
                       asChild
-                      size="lg"
-                      className="rounded-xl px-5 text-base"
+                      size="sm"
+                      className="h-9 rounded-xl px-1 sm:px-5 text-sm sm:text-base"
                     >
                       <Link href="#link">
                         <span className="text-nowrap">İletişime Geç</span>
                       </Link>
                     </Button>
+                    <Button
+                      asChild
+                      size="sm"
+                      variant="outline"
+                      className="h-9 rounded-xl px-1 sm:px-5 text-sm sm:text-base"
+                    >
+                      <Link href="#link">
+                        <span className="text-nowrap">Örnekleri Gör</span>
+                      </Link>
+                    </Button>
                   </div>
-                  <Button
-                    key={2}
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="h-10.5 rounded-xl px-5"
-                  >
-                    <Link href="#link">
-                      <span className="text-nowrap">Örnekleri Gör</span>
-                    </Link>
-                  </Button>
                 </AnimatedGroup>
               </div>
             </div>
@@ -169,26 +168,21 @@ export function HeroSection() {
                 ...transitionVariants,
               }}
             >
-              <div className="relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
+              <div className="relative mt-8 overflow-hidden px-4 sm:mt-12 sm:px-6 md:mt-20 lg:px-8">
                 <div
                   aria-hidden
-                  className="bg-linear-to-b to-background absolute inset-0 z-10 from-transparent from-10%"
+                  className="absolute inset-0 z-10 bg-linerar-to-b from-transparent from-10% to-background"
                 />
-                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
-                  <Image
-                    className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
-                    src="/images/hero-2.jpeg"
-                    alt="app screen"
-                    width="2700"
-                    height="1440"
-                  />
-                  <Image
-                    className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
-                    src="/images/hero-2.jpeg"
-                    alt="app screen"
-                    width="2700"
-                    height="1440"
-                  />
+                <div className="relative mx-auto max-w-7xl">
+                  <div className="relative overflow-hidden rounded-xl border bg-background p-2 shadow-lg shadow-zinc-950/15 ring-1 ring-background dark:shadow-white/20 sm:rounded-2xl sm:p-3 md:p-4">
+                    <Image
+                      className="relative aspect-video w-full rounded-lg bg-background object-cover sm:rounded-xl md:rounded-2xl"
+                      src="/images/hero-2.jpeg"
+                      alt="app screen"
+                      width="2700"
+                      height="1440"
+                    />
+                  </div>
                 </div>
               </div>
             </AnimatedGroup>
