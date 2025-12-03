@@ -1,3 +1,3 @@
-export const Logo = ({ className }: { className?: string }) => {
+export const Logo = () => {
   return <p>Yunus ahşap & Prefabrik</p>;
 };
