@@ -12,37 +12,11 @@ const testimonials = [
     text: "Çok kısa sürede titizlikle ve sıfır hasar ile taşınma sürecimi tamamladılar. Normalde fiyata dahil olmayan konular için bile destek oldular. Güler yüz ve değerli destekleri için çok memnun kaldım. Gönül rahatlığı ile taşınma sürecinizi İdris Bey ve ekibine teslim edebilirsiniz.",
   },
   {
-    name: "Marcus Johnson",
-    role: "CTO, DataDrive Inc",
-    company: "DataDrive",
+    name: "Emir Serhat T.",
+    role: "Şehirler Arası Parça Eşyaa Taşıma",
+    company: "04 TEm 2025",
     rating: 5,
-    text: "The AI voice agents are revolutionary. Our customer satisfaction increased by 40% while reducing response time from hours to seconds. Incredible ROI.",
-    results: [
-      "40% satisfaction boost",
-      "Instant responses",
-      "Seamless integration",
-    ],
-  },
-  {
-    name: "Elena Rodriguez",
-    role: "VP Operations, ScaleUp Co",
-    company: "ScaleUp",
-    rating: 5,
-    text: "From workflow automation to social media management, Lord AI handles everything. Our team can finally focus on strategy instead of repetitive tasks.",
-  },
-  {
-    name: "David Kim",
-    role: "Founder, GrowthLab",
-    company: "GrowthLab",
-    rating: 5,
-    text: "The custom AI systems delivered results beyond our expectations. Revenue increased 150% while operational overhead decreased significantly.",
-  },
-  {
-    name: "Lisa Thompson",
-    role: "Director, InnovateCorp",
-    company: "InnovateCorp",
-    rating: 5,
-    text: "Exceptional AI solutions that actually work. The implementation was smooth, and the results were immediate. Best investment we've made.",
+    text: "Herşey Çok güzeldi fiuyatta yaaardımcı oldular teşekkür ederim.",
   },
 ];
 
