@@ -1,3 +1,3 @@
 export const Logo = () => {
-  return <p>Yunus ahşap & Prefabrik</p>;
+  return <p>Işık Taşımacılık</p>;
 };

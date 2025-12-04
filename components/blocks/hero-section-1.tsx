@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import Image from "next/image";
 import { HeroHeader } from "../layout/HeroHeader";
+import { ReviewSummaryCard } from "./stars";
 
 const transitionVariants = {
   item: {
@@ -82,12 +83,12 @@ export function HeroSection() {
             <div className="mx-auto max-w-7xl px-6">
               <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                 <AnimatedGroup variants={transitionVariants}>
-                  <Link
+                  {/* <Link
                     href="#link"
                     className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-0.5 md:p-1  pl-2 md:pl-4  shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
                   >
                     <span className="text-foreground text-[12px] md:text-sm">
-                      Kampanyaları Görmek İçin Tıklayınız
+                      Hizmetleri Görmek İçin Tıklayınız
                     </span>
                     <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
@@ -101,15 +102,15 @@ export function HeroSection() {
                         </span>
                       </div>
                     </div>
-                  </Link>
+                  </Link> */}
 
                   <h1 className="mt-4 md:mt-8 max-w-4xl mx-auto text-balance text-3xl sm:text-5xl md:text-7xl lg:mt-16 xl:text-[5.25rem]">
-                    Prefabrik ve Çelik Yapı Çözümleri
+                    <span className="text-red-500 font-black">IŞIK</span>{" "}
+                    Farkıyla Taşın, Hemen Ulaş!
                   </h1>
-                  <p className="mx-auto mt-4 md:mt-8 max-w-2xl text-balance text-sm md:text-lg">
-                    Prefabrik yapılar, hem güvenilirlik hem de esneklik sunarak,
-                    hayallerinizi gerçeğe dönüştürmenin en hızlı ve etkili
-                    yoludur.
+                  <p className="mx-auto mt-4 md:mt-8 mb-4 max-w-2xl text-balance text-sm md:text-lg">
+                    Taşımacılık sürecinizi IŞIK gibi aydınlatıyor, her adımda
+                    güven ve kalite sunuyoruz.
                   </p>
                 </AnimatedGroup>
 
@@ -125,31 +126,39 @@ export function HeroSection() {
                     },
                     ...transitionVariants,
                   }}
-                  className="mt-6 md:mt-12 flex flex-col items-center justify-center gap-2 md:flex-row"
+                  className="mt-6 md:mt-12 flex flex-row items-center justify-center gap-2 md:flex-row"
                 >
-                  <div
-                    key={1}
-                    className="grid gap-2 grid-cols-2 rounded-[14px] border p-0.5"
-                  >
-                    <Button
-                      asChild
-                      size="sm"
-                      className="h-9 rounded-xl px-1 sm:px-5 text-sm sm:text-base"
+                  <div className="">
+                    <ReviewSummaryCard
+                      className="mb-4"
+                      rating={5.0}
+                      reviewCount={260}
+                      summaryText="Sizde daha iyi hizmet için iletişime geçin"
+                    />
+                    <div
+                      key={1}
+                      className="grid gap-2 grid-cols-2 rounded-[14px] border p-0.5"
                     >
-                      <Link href="#link">
-                        <span className="text-nowrap">İletişime Geç</span>
-                      </Link>
-                    </Button>
-                    <Button
-                      asChild
-                      size="sm"
-                      variant="outline"
-                      className="h-9 rounded-xl px-1 sm:px-5 text-sm sm:text-base"
-                    >
-                      <Link href="#link">
-                        <span className="text-nowrap">Örnekleri Gör</span>
-                      </Link>
-                    </Button>
+                      <Button
+                        asChild
+                        size="sm"
+                        className="h-9 rounded-xl px-1 sm:px-5 text-sm sm:text-base"
+                      >
+                        <Link href="#link">
+                          <span className="text-nowrap">Hadi Taşınalım</span>
+                        </Link>
+                      </Button>
+                      <Button
+                        asChild
+                        size="sm"
+                        variant="outline"
+                        className="h-9 rounded-xl px-1 sm:px-5 text-sm sm:text-base"
+                      >
+                        <Link href="#link">
+                          <span className="text-nowrap">İletişime Geç</span>
+                        </Link>
+                      </Button>
+                    </div>
                   </div>
                 </AnimatedGroup>
               </div>

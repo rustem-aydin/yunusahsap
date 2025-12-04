@@ -7,9 +7,8 @@ import { Menu, X } from "lucide-react";
 import ThemeToggle from "../theme-toggle";
 
 const menuItems = [
-  { name: "Ürünlerimiz", href: "#link" },
-  { name: "Projelerimiz", href: "#link" },
-  { name: "Sık Sorulan Sorular", href: "#link" },
+  { name: "Anasayfa", href: "/" },
+  { name: "Hakkında", href: "#link" },
   { name: "İletişim", href: "#link" },
 ];
 
