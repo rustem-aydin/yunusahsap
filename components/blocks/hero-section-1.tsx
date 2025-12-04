@@ -6,6 +6,8 @@ import { HeroHeader } from "../layout/HeroHeader";
 import { ReviewSummaryCard } from "./stars";
 import { Footer } from "../ui/footer";
 import { PremiumTestimonials } from "../ui/premium-testimonials";
+import AboutUsSection from "../features-seciton";
+import PricingSection from "./pricing-seciton";
 
 const transitionVariants = {
   item: {
@@ -288,7 +290,9 @@ export function HeroSection() {
             </div>
           </div> */}
         </section>
+        <AboutUsSection />
         <PremiumTestimonials />
+        <PricingSection />
       </main>
     </>
   );

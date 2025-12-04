@@ -1,7 +1,16 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-import { Quote, Star, ArrowLeft, ArrowRight, Sparkles } from "lucide-react";
+import {
+  Quote,
+  Star,
+  ArrowLeft,
+  ArrowRight,
+  Sparkles,
+  Zap,
+  Group,
+  Users,
+} from "lucide-react";
 
 const testimonials = [
   {
@@ -79,7 +88,14 @@ export function PremiumTestimonials() {
       },
     },
   };
-
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.6, ease: easeInOut },
+    },
+  };
   const nextTestimonial = () => {
     setDirection(1);
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
@@ -95,11 +111,9 @@ export function PremiumTestimonials() {
   return (
     <section
       id="testimonials"
-      className="relative py-32 to-black text-white overflow-hidden"
+      className="relative py-6 to-black overflow-hidden"
     >
-      {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
-        {/* Animated gradient mesh */}
         <motion.div
           className="absolute inset-0 "
           animate={{
@@ -115,9 +129,8 @@ export function PremiumTestimonials() {
           }}
         />
 
-        {/* Moving light orbs */}
         <motion.div
-          className="absolute top-1/3 left-1/5 w-72 h-72 bg-indigo-400/15 rounded-full blur-3xl"
+          className="absolute top-1/3 left-1/5 w-72 h-72 bg-rose-400/15 rounded-full blur-3xl"
           animate={{
             x: [0, 150, 0],
             y: [0, 80, 0],
@@ -176,37 +189,28 @@ export function PremiumTestimonials() {
         viewport={{ once: true, margin: "-100px" }}
       >
         {/* Header */}
-        <motion.div className="text-center mb-20" variants={fadeInUp}>
-          <motion.h2
-            className="text-4xl sm:text-6xl md:text-7xl font-bold mb-8 tracking-tight"
-            variants={fadeInUp}
+        <motion.div
+          className="flex flex-col items-center mb-6"
+          variants={itemVariants}
+        >
+          <motion.span
+            className="text-rose-500 font-medium mb-2 flex items-center gap-2"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
-              Onlar Güvendilerr
-            </span>
-            <br />
-            <motion.span
-              className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-purple-300 to-rose-300"
-              animate={{
-                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              style={{
-                backgroundSize: "200% 200%",
-              }}
-            ></motion.span>
-          </motion.h2>
-
-          <motion.p
-            className="text-xl sm:text-2xl text-white/60 max-w-4xl mx-auto leading-relaxed"
-            variants={fadeInUp}
-          >
-            Memnun kalan müşteriler
-          </motion.p>
+            <Users className="w-4 h-4" />
+            Onlar Güvendiler
+          </motion.span>
+          <h2 className="text-4xl md:text-5xl font-light mb-4 text-center">
+            Yorumlar
+          </h2>
+          <motion.div
+            className="w-24 h-1 bg-rose-500"
+            initial={{ width: 0 }}
+            animate={{ width: 96 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          ></motion.div>
         </motion.div>
 
         {/* Main Testimonial Display */}
@@ -251,43 +255,19 @@ export function PremiumTestimonials() {
                     animate={{ rotate: [0, 10, 0] }}
                     transition={{ duration: 4, repeat: Infinity }}
                   >
-                    <Quote className="w-16 h-16 text-white" />
+                    <Quote className="w-16 h-16" />
                   </motion.div>
 
                   <div className="relative z-10 h-full flex flex-col md:flex-row items-center gap-8">
                     {/* User Info */}
                     <div className="flex-shrink-0 text-center md:text-left">
-                      <motion.div
-                        className="relative mb-6"
-                        whileHover={{ scale: 1.1 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <div className="w-24 h-24 mx-auto md:mx-0 rounded-full overflow-hidden border-4 border-white/20 relative">
-                          <motion.div
-                            className="absolute inset-0 bg-gradient-to-br from-indigo-400/20 to-rose-400/20"
-                            animate={{ opacity: [0, 0.3, 0] }}
-                            transition={{ duration: 3, repeat: Infinity }}
-                          />
-                        </div>
-
-                        {/* Floating ring animation */}
-                        <motion.div
-                          className="absolute inset-0 border-2 border-indigo-400/30 rounded-full"
-                          animate={{
-                            scale: [1, 1.4, 1],
-                            opacity: [0.5, 0, 0.5],
-                          }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                        />
-                      </motion.div>
-
-                      <h3 className="text-2xl font-bold text-white mb-2">
+                      <h3 className="text-2xl font-bold mb-2">
                         {testimonials[currentIndex].name}
                       </h3>
-                      <p className="text-indigo-300 mb-1 font-medium">
+                      <p className="text-rose-500 mb-1 font-medium">
                         {testimonials[currentIndex].role}
                       </p>
-                      <p className="text-white/60 mb-4">
+                      <p className=" mb-4">
                         {testimonials[currentIndex].company}
                       </p>
 
@@ -311,7 +291,7 @@ export function PremiumTestimonials() {
                     {/* Content */}
                     <div className="flex-1">
                       <motion.blockquote
-                        className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8 font-light italic"
+                        className="text-md md:text-2xl  leading-relaxed mb-8 font-light italic"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3, duration: 0.8 }}
@@ -350,7 +330,7 @@ export function PremiumTestimonials() {
                   }}
                   className={`w-3 h-3 rounded-full transition-all ${
                     index === currentIndex
-                      ? "bg-indigo-400 scale-125"
+                      ? "bg-rose-500 scale-125"
                       : "bg-white/30 hover:bg-white/50"
                   }`}
                   whileHover={{ scale: 1.2 }}
