@@ -1,10 +1,12 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Github, Hexagon, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import Image from "next/image";
 import { HeroHeader } from "../layout/HeroHeader";
 import { ReviewSummaryCard } from "./stars";
+import CommentSection from "./comment-section";
+import { Footer } from "../ui/footer";
 
 const transitionVariants = {
   item: {
