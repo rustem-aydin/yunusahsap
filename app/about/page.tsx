@@ -1,4 +1,3 @@
-import { TestimonialsSection } from "@/components/blocks/testimonials-with-marquee";
 import { Component } from "@/components/marquee-caarrd";
 import React from "react";
 const testimonials = [
