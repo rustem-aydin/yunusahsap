@@ -1,83 +1,165 @@
-import { Button } from "@/components/ui/button";
+import {
+  DribbbleIcon,
+  GithubIcon,
+  TwitchIcon,
+  TwitterIcon,
+} from "lucide-react";
 import Link from "next/link";
+import { Separator } from "./seperator";
 
-interface FooterProps {
-  logo: React.ReactNode;
-  brandName: string;
-  socialLinks: Array<{
-    icon: React.ReactNode;
-    href: string;
-    label: string;
-  }>;
-  mainLinks: Array<{
-    href: string;
-    label: string;
-  }>;
+const footerSections = [
+  {
+    title: "Sayfalar",
+    links: [
+      {
+        title: "Anasayfa",
+        href: "/",
+      },
+      {
+        title: "Hakkımızda",
+        href: "/hakkinda",
+      },
+      {
+        title: "İletişim",
+        href: "/iletisim",
+      },
+    ],
+  },
+  {
+    title: "Hizmet Yerleri",
+    links: [
+      {
+        title: "İstanbul-Ankara Taşımacılık",
+        href: "https://isikevdeneve.com",
+      },
+      {
+        title: "İstanbul-İzmir Taşımacılık",
+        href: "https://isikevdeneve.com",
+      },
+      {
+        title: "İstanbul-Samsun Taşımacılık",
+        href: "https://isikevdeneve.com",
+      },
+      {
+        title: "İstanbul-Bursa Taşımacılık",
+        href: "https://isikevdeneve.com",
+      },
+      {
+        title: "İstanbul İçi Taşımacılık",
+        href: "https://isikevdeneve.com",
+      },
+      {
+        title: "Tüm Türkiye",
+        href: "https://isikevdeneve.com",
+      },
+    ],
+  },
+  {
+    title: "Hizmetlerimiz",
+    links: [
+      {
+        title: "Ekspertiz Hizmeti",
+        href: "https://isikevdeneve.com",
+      },
+      {
+        title: "Demonte Kolileme",
+        href: "https://isikevdeneve.com",
+      },
+      {
+        title: "Hedefe Taşıma",
+        href: "https://isikevdeneve.com",
+      },
+      {
+        title: "Asansör Hizmeti",
+        href: "https://isikevdeneve.com",
+      },
+      {
+        title: "Monte Etme",
+        href: "https://isikevdeneve.com",
+      },
+      {
+        title: "Eşyaları Yerleştirme",
+        href: "https://isikevdeneve.com",
+      },
+    ],
+  },
+];
 
-  copyright: {
-    text: string;
-    license?: string;
-  };
-}
-
-export function Footer({
-  logo,
-  brandName,
-  socialLinks,
-  mainLinks,
-  copyright,
-}: FooterProps) {
+const Footer = () => {
   return (
-    <footer className=" pb-8 pt-24">
-      <div className="px-4 lg:px-48">
-        <div className="flex  items-center justify-between">
-          <Link
-            href="/"
-            className="flex items-center gap-x-2"
-            aria-label={brandName}
-          >
-            {logo}
-            <span className="font-bold text-xl">{brandName}</span>
-          </Link>
-          <ul className="flex list-none  md:mt-0 space-x-3">
-            {socialLinks.map((link, i) => (
-              <li key={i}>
-                <Button
-                  variant="secondary"
-                  size="icon"
-                  className="h-10 w-10 rounded-full"
-                  asChild
-                >
-                  <a href={link.href} target="_blank" aria-label={link.label}>
-                    {link.icon}
-                  </a>
-                </Button>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="border-t mt-6 pt-6 md:mt-4 md:pt-8 lg:grid lg:grid-cols-10">
-          <nav className="lg:mt-0 lg:col-[4/11]">
-            <ul className="list-none flex flex-wrap -my-1 -mx-2 lg:justify-end">
-              {mainLinks.map((link, i) => (
-                <li key={i} className="my-1 mx-2 shrink-0">
-                  <a
-                    href={link.href}
-                    className="text-sm text-primary underline-offset-4 hover:underline"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+    <div className="mt-24  flex flex-col">
+      <div className="grow" />
+      <footer className="border-t">
+        <div className="max-w-(--breakpoint-xl) mx-auto">
+          <div className="py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-x-8 gap-y-10 px-6 xl:px-0">
+            <div className="col-span-full xl:col-span-2">
+              {/* Logo */}
+              <span>Işık Taşımacılık</span>
 
-          <div className="mt-6 text-sm leading-6 text-muted-foreground whitespace-nowrap lg:mt-0 lg:row-[1/3] lg:col-[1/4]">
-            <div>{copyright.text}</div>
-            {copyright.license && <div>{copyright.license}</div>}
+              <p className="mt-4 text-muted-foreground">
+                Taşımacılık sürecinizi IŞIK gibi aydınlatıyor, her adımda güven
+                ve kalite sunuyoruz.
+              </p>
+            </div>
+
+            {footerSections.map(({ title, links }) => (
+              <div key={title}>
+                <h6 className="font-medium">{title}</h6>
+                <ul className="mt-6 space-y-4">
+                  {links.map(({ title, href }) => (
+                    <li key={title}>
+                      <Link
+                        href={href}
+                        className="text-muted-foreground hover:text-foreground"
+                      >
+                        {title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <Separator />
+          <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
+            <span className="text-muted-foreground">
+              &copy; {new Date().getFullYear()}{" "}
+              <Link href="/" target="_blank">
+                Işık Taşımacılık
+              </Link>
+              . Tüm Hakları Saklıdır
+            </span>
+            <span className="text-muted-foreground">
+              Bu site{" "}
+              <Link
+                className="underline"
+                href="https://rustemaydin.com"
+                target="_blank"
+              >
+                rustemaydin.com
+              </Link>{" "}
+              tarafından geliştirilmiştir.
+            </span>
+
+            {/* <div className="flex items-center gap-5 text-muted-foreground">
+              <Link href="#" target="_blank">
+                <TwitterIcon className="h-5 w-5" />
+              </Link>
+              <Link href="#" target="_blank">
+                <DribbbleIcon className="h-5 w-5" />
+              </Link>
+              <Link href="#" target="_blank">
+                <TwitchIcon className="h-5 w-5" />
+              </Link>
+              <Link href="#" target="_blank">
+                <GithubIcon className="h-5 w-5" />
+              </Link>
+            </div> */}
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   );
-}
+};
+
+export default Footer;

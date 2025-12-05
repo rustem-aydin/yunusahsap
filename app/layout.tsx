@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { HeroHeader } from "@/components/layout/HeroHeader";
+import { Hexagon, Instagram, Twitter } from "lucide-react";
+import Footer from "@/components/ui/footer";
 
 export const metadata: Metadata = {
   title: "Işık Nakliyat",
@@ -21,8 +24,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <HeroHeader />
+
           {children}
         </ThemeProvider>
+        <Footer />
       </body>
     </html>
   );

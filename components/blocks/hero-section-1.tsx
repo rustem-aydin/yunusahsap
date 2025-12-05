@@ -2,9 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import Image from "next/image";
-import { HeroHeader } from "../layout/HeroHeader";
 import { ReviewSummaryCard } from "./stars";
-import { Footer } from "../ui/footer";
 import { PremiumTestimonials } from "../ui/premium-testimonials";
 import AboutUsSection from "../features-seciton";
 import PricingSection from "./pricing-seciton";
@@ -32,7 +30,6 @@ const transitionVariants = {
 export function HeroSection() {
   return (
     <>
-      <HeroHeader />
       <main className="overflow-hidden">
         <div
           aria-hidden

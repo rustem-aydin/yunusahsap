@@ -413,11 +413,6 @@ function ServiceItem({
       >
         {description}
       </motion.p>
-      <motion.div className="mt-3 pl-12 flex items-center text-[#88734C] text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <span className="flex items-center gap-1">
-          Learn more <ArrowRight className="w-3 h-3" />
-        </span>
-      </motion.div>
     </motion.div>
   );
 }

@@ -8,8 +8,8 @@ import ThemeToggle from "../theme-toggle";
 
 const menuItems = [
   { name: "Anasayfa", href: "/" },
-  { name: "Hakkında", href: "#link" },
-  { name: "İletişim", href: "#link" },
+  { name: "Hakkında", href: "/hakkinda" },
+  { name: "İletişim", href: "/iletisim" },
 ];
 
 export const HeroHeader = () => {
