@@ -67,7 +67,7 @@ const Gallery4 = ({ items }: Gallery4Props) => {
                 carouselApi?.scrollPrev();
               }}
               disabled={!canScrollPrev}
-              className="disabled:pointer-events-auto"
+              className="disabled:pointer-events-auto "
             >
               <ArrowLeft className="size-5" />
             </Button>

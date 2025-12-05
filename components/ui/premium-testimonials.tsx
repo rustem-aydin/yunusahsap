@@ -309,7 +309,7 @@ export function PremiumTestimonials() {
           <div className="flex justify-center items-center gap-6 mt-8">
             <motion.button
               onClick={prevTestimonial}
-              className="p-3 rounded-full bg-white/[0.08] border border-white/[0.15] backdrop-blur-sm text-white hover:bg-white/[0.15] transition-all"
+              className="p-3 rounded-full bg-rose-500/20 border border-white/[0.15] backdrop-blur-sm  hover:bg-rose-500/20 transition-all"
               whileHover={{
                 scale: 1.1,
                 backgroundColor: "rgba(255, 255, 255, 0.15)",
@@ -319,7 +319,6 @@ export function PremiumTestimonials() {
               <ArrowLeft className="w-5 h-5" />
             </motion.button>
 
-            {/* Dots Indicator */}
             <div className="flex gap-3">
               {testimonials.map((_, index) => (
                 <motion.button
@@ -341,7 +340,7 @@ export function PremiumTestimonials() {
 
             <motion.button
               onClick={nextTestimonial}
-              className="p-3 rounded-full bg-white/[0.08] border border-white/[0.15] backdrop-blur-sm text-white hover:bg-white/[0.15] transition-all"
+              className="p-3 rounded-full bg-rose-500/20 border border-white/[0.15] backdrop-blur-sm   transition-all"
               whileHover={{
                 scale: 1.1,
                 backgroundColor: "rgba(255, 255, 255, 0.15)",

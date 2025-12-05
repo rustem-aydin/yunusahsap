@@ -6,6 +6,8 @@ import { ReviewSummaryCard } from "./stars";
 import { PremiumTestimonials } from "../ui/premium-testimonials";
 import AboutUsSection from "../features-seciton";
 import PricingSection from "./pricing-seciton";
+import { Phone } from "lucide-react";
+import { BsWhatsapp } from "react-icons/bs";
 
 const transitionVariants = {
   item: {
@@ -144,7 +146,9 @@ export function HeroSection() {
                         size="sm"
                         className="h-9 rounded-xl px-1 sm:px-5 text-sm sm:text-base"
                       >
-                        <Link href="#link">
+                        <Link href="tel:+905326850615" className="gap-1">
+                          <Phone size={20} />
+
                           <span className="text-nowrap">Hadi Taşınalım</span>
                         </Link>
                       </Button>
@@ -154,7 +158,11 @@ export function HeroSection() {
                         variant="outline"
                         className="h-9 rounded-xl px-1 sm:px-5 text-sm sm:text-base"
                       >
-                        <Link href="#link">
+                        <Link
+                          className="gap-1"
+                          href="https://wa.me/90532850615?text=Merhaba%ben%2C%taşınmak%istiyorum."
+                        >
+                          <BsWhatsapp size={18} />
                           <span className="text-nowrap">İletişime Geç</span>
                         </Link>
                       </Button>
@@ -197,96 +205,7 @@ export function HeroSection() {
             </AnimatedGroup>
           </div>
         </section>
-        <section className="bg-background pb-16 pt-16 md:pb-32">
-          {/* <div className="group relative m-auto max-w-5xl px-6">
-            <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
-              <Link
-                href="/"
-                className="block text-sm duration-150 hover:opacity-75"
-              >
-                <span> Meet Our Customers</span>
 
-                <ChevronRight className="ml-1 inline-block size-3" />
-              </Link>
-            </div>
-            <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14">
-              <div className="flex">
-                <Image
-                  className="mx-auto h-5 w-fit dark:invert"
-                  src="https://html.tailus.io/blocks/customers/nvidia.svg"
-                  alt="Nvidia Logo"
-                  height="20"
-                  width="20"
-                />
-              </div>
-
-              <div className="flex">
-                <Image
-                  className="mx-auto h-4 w-fit dark:invert"
-                  src="https://html.tailus.io/blocks/customers/column.svg"
-                  alt="Column Logo"
-                  height="16"
-                  width="16"
-                />
-              </div>
-              <div className="flex">
-                <Image
-                  className="mx-auto h-4 w-fit dark:invert"
-                  src="https://html.tailus.io/blocks/customers/github.svg"
-                  alt="GitHub Logo"
-                  height="16"
-                  width="16"
-                />
-              </div>
-              <div className="flex">
-                <Image
-                  className="mx-auto h-5 w-fit dark:invert"
-                  src="https://html.tailus.io/blocks/customers/nike.svg"
-                  alt="Nike Logo"
-                  height="20"
-                  width="20"
-                />
-              </div>
-              <div className="flex">
-                <Image
-                  className="mx-auto h-5 w-fit dark:invert"
-                  src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-                  alt="Lemon Squeezy Logo"
-                  height="20"
-                  width="20"
-                />
-              </div>
-              <div className="flex">
-                <Image
-                  className="mx-auto h-4 w-fit dark:invert"
-                  src="https://html.tailus.io/blocks/customers/laravel.svg"
-                  alt="Laravel Logo"
-                  height="16"
-                  width="16"
-                />
-              </div>
-              <div className="flex">
-                <Image
-                  className="mx-auto h-7 w-fit dark:invert"
-                  src="https://html.tailus.io/blocks/customers/lilly.svg"
-                  alt="Lilly Logo"
-                  height="28"
-                  width="28"
-                />
-              </div>
-
-              <div className="flex">
-                <Image
-                  className="mx-auto h-6 w-fit dark:invert"
-                  src="https://html.tailus.io/blocks/customers/openai.svg"
-                  alt="OpenAI Logo"
-                  height="24"
-                  width="24"
-                />
-              </div>
-            </div>
-          </div> */}
-        </section>
         <AboutUsSection />
         <PremiumTestimonials />
         <PricingSection />

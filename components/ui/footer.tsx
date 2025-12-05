@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Separator } from "./seperator";
+import { Logo } from "../blocks/logo";
 
 const footerSections = [
   {
@@ -83,6 +84,23 @@ const footerSections = [
       },
     ],
   },
+  {
+    title: "İletişim",
+    links: [
+      {
+        title: "E-posta Adresi",
+        href: "mailto:isik.nakliyat.maltepe@gmail.com",
+      },
+      {
+        title: "+90 532 685 06 15",
+        href: "tel:+905326850615",
+      },
+      {
+        title: "",
+        href: "/",
+      },
+    ],
+  },
 ];
 
 const Footer = () => {
@@ -91,17 +109,14 @@ const Footer = () => {
       <div className="grow" />
       <footer className="border-t">
         <div className="max-w-(--breakpoint-xl) mx-auto">
-          <div className="py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-x-8 gap-y-10 px-6 xl:px-0">
+          <div className="py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-x-8 gap-y-10 px-6 xl:px-0">
             <div className="col-span-full xl:col-span-2">
-              {/* Logo */}
-              <span>Işık Taşımacılık</span>
-
+              <Logo />
               <p className="mt-4 text-muted-foreground">
                 Taşımacılık sürecinizi IŞIK gibi aydınlatıyor, her adımda güven
                 ve kalite sunuyoruz.
               </p>
             </div>
-
             {footerSections.map(({ title, links }) => (
               <div key={title}>
                 <h6 className="font-medium">{title}</h6>
@@ -124,10 +139,7 @@ const Footer = () => {
           <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
             <span className="text-muted-foreground">
               &copy; {new Date().getFullYear()}{" "}
-              <Link href="/" target="_blank">
-                Işık Taşımacılık
-              </Link>
-              . Tüm Hakları Saklıdır
+              <Link href="/" target="_blank"></Link>. Tüm Hakları Saklıdır
             </span>
             <span className="text-muted-foreground">
               Bu site{" "}

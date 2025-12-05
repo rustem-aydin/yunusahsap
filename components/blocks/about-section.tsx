@@ -113,9 +113,9 @@ export default function AboutSection() {
             <Zap className="w-4 h-4" />
             Biz Kimiz
           </motion.span>
-          <h2 className="text-4xl md:text-5xl font-light mb-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-light mb-4 text-center">
             Hakkımızda
-          </h2>
+          </h1>
           <motion.div
             className="w-24 h-1 bg-rose-500"
             initial={{ width: 0 }}
@@ -138,11 +138,11 @@ export default function AboutSection() {
           className="text-center text-lg max-w-2xl mx-auto mb-10"
           variants={itemVariants}
         >
-          Polattrans Nakliyat Firması, uzun yıllara dayanan deneyimi ve
-          profesyonel ekibiyle Türkiye’nin önde gelen nakliyat firmalarından
-          biridir. 1995 yılında Ankara’da kurulan firmamız, müşteri odaklı
-          hizmet anlayışıyla sektörde önemli bir yer edinmiştir. Güvenilirlik,
-          hız ve profesyonellik firmamızın temel ilkeleridir.
+          Işık Nakliyat Firması, uzun yıllara dayanan deneyimi ve profesyonel
+          ekibiyle Türkiye’nin önde gelen nakliyat firmalarından biridir. 1980
+          yılında İstanbulda kurulan firmamız, müşteri odaklı hizmet anlayışıyla
+          sektörde önemli bir yer edinmiştir. Güvenilirlik, hız ve
+          profesyonellik firmamızın temel ilkeleridir.
         </motion.p>
         <motion.ul
           className="space-y-4 max-w-2xl mx-auto text-lg"

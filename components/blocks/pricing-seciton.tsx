@@ -16,7 +16,7 @@ const demoPlans = [
     ],
     description: "Özel İstekleriniz İçin İletişime Geçiniz.",
     buttonText: "İletişime Geç",
-    href: "/",
+    href: "https://wa.me/90532850615?text=Merhaba%ben%2C%taşınmak%istiyorum.",
     isPopular: false,
   },
   {
@@ -34,7 +34,7 @@ const demoPlans = [
     ],
     description: "Özel İstekleriniz İçin İletişime Geçiniz.",
     buttonText: "İletişime Geç",
-    href: "/",
+    href: "https://wa.me/90532850615?text=Merhaba%ben%2C%taşınmak%istiyorum.",
     isPopular: true,
   },
   {
@@ -52,7 +52,7 @@ const demoPlans = [
     ],
     description: "Özel İstekleriniz İçin İletişime Geçiniz.",
     buttonText: "İletişime Geç",
-    href: "/",
+    href: "https://wa.me/90532850615?text=Merhaba%ben%2C%taşınmak%istiyorum.",
     isPopular: false,
   },
 ];

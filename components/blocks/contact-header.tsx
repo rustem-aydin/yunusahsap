@@ -104,9 +104,9 @@ export default function AboutSection() {
             <Zap className="w-4 h-4" />
             Bize Ulaşın
           </motion.span>
-          <h2 className="text-4xl md:text-5xl font-light mb-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-light mb-4 text-center">
             İletişim
-          </h2>
+          </h1>
           <motion.div
             className="w-24 h-1 bg-rose-500"
             initial={{ width: 0 }}
