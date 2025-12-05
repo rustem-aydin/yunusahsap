@@ -34,7 +34,7 @@ const contactMethods = [
     icon: Phone,
     title: "Telefon",
     value: "+90 532 685 06 15",
-    description: "",
+    description: "0850 305 15 04",
     link: "tel:+905326850615",
     gradient: "from-rose-500/20 to-rose-500/20",
     hoverColor: "green",
